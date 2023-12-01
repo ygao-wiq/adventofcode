@@ -5,6 +5,8 @@ class Solution(object):
         :type numRows: int
         :rtype: str
         """
+        if numRows == 1 or len(s) == 0:
+            return s
         ret = list()
         row = 0
         inc = 1
