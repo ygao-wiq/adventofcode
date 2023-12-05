@@ -38,6 +38,9 @@ class Range(object):
 
     def get_target_value(self, offset: int) -> int:
         return self.start + offset
+    
+    def get_boundaries(self) -> tuple[int, int]:
+        return (self.start, self.start+self.length-1)
 
 
 def parse_data(data_lines: list[str]):
@@ -87,21 +90,51 @@ def solution_2():
     data_lines = [l.strip() for l in utils.get_file_content("day5.dat")]
     parse_data(data_lines)
     ret = sys.maxsize
-    local_seed_lst = list(zip(seed_lst[0::2], seed_lst[1::2]))
-    for start_seed, seed_length in local_seed_lst:
-        start_seed_i = start_seed
-        while start_seed_i < start_seed+seed_length:
-            src = start_seed_i
-            for k in total_maps.keys():
-                search_map = total_maps[k]
-                src = get_next_value(src, search_map)
-            ret = min(ret, src)
-            start_seed_i += 1
+    temp_seed_lst: list[tuple[int, int]] = list(zip(seed_lst[0::2], seed_lst[1::2]))
+    local_seed_list: list[Range] = []
+    for s in temp_seed_lst:
+        local_seed_list.append(Range(s[0], s[1]))
+    print("seed", [r.get_boundaries() for r in local_seed_list])
+    for k in total_maps.keys():
+        tmp_next_round: list[Range] = list()
+        while len(local_seed_list) > 0:
+            s = local_seed_list.pop(0)
+            seed_start, seed_end = s.get_boundaries()
+            mappings = total_maps[k]
+            found = False
+            for src, dest in mappings.items():
+                source_start, source_end = src.get_boundaries()
+                dest_start, dest_end = dest.get_boundaries()
+                if source_start<=seed_start<=seed_end<=source_end:
+                    tmp_next_round.append(Range(seed_start+(dest_start-source_start), (seed_end-seed_start+1)))
+                    found = True
+                    break
+                elif source_start<=seed_start<=source_end:
+                    tmp_next_round.append(Range(seed_start+(dest_start-source_start), (source_end-seed_start+1)))
+                    local_seed_list.append(Range(source_end+1, seed_end-source_end))
+                    found = True
+                    break
+                elif source_start<=seed_end<=source_end:
+                    local_seed_list.append(Range(seed_start, source_start-seed_start))
+                    tmp_next_round.append(Range(dest_start, seed_end-source_start+1))
+                    found = True
+                    break
+                elif seed_start < source_start <= source_end < seed_end:
+                    local_seed_list.append(Range(source_end+1, seed_end-source_end))
+                    local_seed_list.append(Range(seed_start, source_start-seed_start))
+                    tmp_next_round.append(Range(dest_start, dest_end-dest_start+1))
+                    found = True
+                    break
+            if not found:
+                tmp_next_round.append(Range(seed_start, seed_end-seed_start+1))
+        local_seed_list = tmp_next_round
+        print(k, min([r.get_boundaries() for r in local_seed_list]))
+        
+    ret = min([r.get_boundaries()[0] for r in local_seed_list])
     print(ret)
 
-
 if __name__ == "__main__":
-    solution_1()
+    #solution_1()
     seed_lst.clear()
     for k, v in total_maps.items():
         v.clear()
