@@ -149,7 +149,7 @@ def solution_2():
         escaped = False
 
         while to_handle:
-            x,y = to_handle.pop(-1)
+            x,y = to_handle.pop(0)
 
             for nx,ny in [(x-1,y),(x+1,y),(x,y+1),(x,y-1)]:
                 if nx < 0 or nx > (len(chart_map[0]) * 2) - 2:
@@ -168,9 +168,7 @@ def solution_2():
         if not escaped:
             contained.update(expanded)
 
-    real_contained = [(x//2,y//2) for x,y in contained if x % 2 == 0 and y % 2 == 0]
-
-    print(len(real_contained))
+    print(len([(x//2,y//2) for x,y in contained if x % 2 == 0 and y % 2 == 0]))
     
 if __name__ == "__main__":
     solution_1()
