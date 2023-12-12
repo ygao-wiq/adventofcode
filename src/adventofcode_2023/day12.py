@@ -46,7 +46,7 @@ def solve_2(onsens, numbers):
     remained_onsens_qty = sum(remained_numbers) + len(remained_numbers)
     count = 0
     for i in range(size-remained_onsens_qty-first_brokens+1):
-        candidate = '.' * i + '#' * first_brokens + '.'
+        candidate = "." * i + "#" * first_brokens + "."
         j = 0
         valid = True
         while j < min(len(onsens), len(candidate)):
