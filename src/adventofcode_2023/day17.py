@@ -117,12 +117,11 @@ def solution_2():
     queue = list()
 
     graph = utils.make_graph(graph_fn)
-    ## answer has bug lol. holy shit. so here I used a boundary value to get a "RIGHT" one
-    heapq.heappush(queue, (0, (0, 0, -1, 0, 4)))
+    heapq.heappush(queue, (0, (0, 0, 0, 0, 4)))
 
     # graph = utils.make_graph(graph_fn2)
-    #heapq.heappush(queue, (0, (0, 0, 1, 0, 0)))
-    #heapq.heappush(queue, (0, (0, 0, 0, 1, 0)))
+    # heapq.heappush(queue, (0, (0, 0, 1, 0, 0)))
+    # heapq.heappush(queue, (0, (0, 0, 0, 1, 0)))
     heapq.heapify(queue)
     while queue:
         curr_loss, current_node = heapq.heappop(queue)
@@ -132,8 +131,9 @@ def solution_2():
             continue
         seen.add(current_node)
         if x == width - 1 and y == height - 1:
-            ret = curr_loss
-            break
+            if current_node[4] >=4:
+                ret = curr_loss
+                break
         for neighbour_node, neighbour_loss in graph[current_node]:
             if neighbour_node in seen:
                 continue
@@ -142,5 +142,5 @@ def solution_2():
 
 
 if __name__ == "__main__":
-    #solution_1()
+    solution_1()
     solution_2()
