@@ -1,6 +1,6 @@
 import dataclasses
 import utils
-
+from z3 import *
 @dataclasses.dataclass
 class Hailstone:
     px: int
@@ -57,19 +57,19 @@ def solution_2(data_lines: list[str]):
     for line in data_lines:
         (px, py, pz), (vx, vy, vz) = tuple(map(lambda p: p.split(", "), line.split(" @ ")))
         hailstones.append(Hailstone(int(px.strip()), int(py.strip()), int(pz.strip()), int(vx.strip()), int(vy.strip()), int(vz.strip())))
-    from z3 import *
     x,y,z,vx,vy,vz = Int('x'),Int('y'),Int('z'),Int('vx'),Int('vy'),Int('vz')
     T = [Int(f'T{i}') for i in range(len(hailstones))]
     SOLVE = Solver()
-    for i in range(n):
+    for i in range(len(hailstones)):
         SOLVE.add(x + T[i]*vx - hailstones[i].px - T[i]*hailstones[i].vx == 0)
         SOLVE.add(y + T[i]*vy - hailstones[i].py - T[i]*hailstones[i].vy == 0)
         SOLVE.add(z + T[i]*vz - hailstones[i].pz - T[i]*hailstones[i].vz == 0)
     res = SOLVE.check()
     M = SOLVE.model()
     print(M.eval(x+y+z))
+
 if __name__ == "__main__":
     data_lines = utils.get_file_content("day24.dat")
     data_lines = [l.strip() for l in data_lines]
     solution_1(data_lines)
-    #solution_2(data_lines)
+    solution_2(data_lines)
