@@ -21,11 +21,16 @@ class Solution(object):
             "I": 1
         }
         ret = 0
-        while roman:
-            for k in ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]:
+
+        for k in ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]:
+            while roman:
                 if roman.startswith(k):
                     ret += roman_to_int_mapping[k]
                     roman = roman[len(k):]
+                else:
+                    break
+            else:
+                break
         return ret
 
 if __name__ == "__main__":
