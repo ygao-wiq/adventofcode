@@ -24,10 +24,12 @@ class Solution(object):
                 if odd_even:
                     return max(maxLeftA, maxLeftB)
                 else:
-                    return (max(maxLeftA, maxLeftB) + min(minRightA, minRightB)) / 2
+                    return (max(maxLeftA, maxLeftB) + min(minRightA, minRightB)) / 2.0
             else:
                 if maxLeftA > minRightB:
                     right = partition_nums1 - 1
                 else:
                     left = partition_nums1 + 1
 
+if __name__ == "__main__":
+    print(Solution().findMedianSortedArrays([1,2], [3,4]))
