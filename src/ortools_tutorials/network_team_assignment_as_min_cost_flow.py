@@ -2,7 +2,10 @@ from ortools.graph.python import min_cost_flow
 
 
 def network_team_assignment_as_min_cost_entry():
-    """network_team_assignment_as_min_cost_entry is the entry function solving an assignment with teams of worker."""
+    """network_team_assignment_as_min_cost_entry is the entry function solving an assignment with teams of worker.
+    
+    One extra constraint for this problem is each group is limited to at most 2 tasks
+    """
     smcf = min_cost_flow.SimpleMinCostFlow()
 
     # Define the directed graph for the flow.
