@@ -29,6 +29,3 @@ Run following commands:
 |[cp_sat_single_solution_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/cp_sat_single_solution_example.py)| An example to find a single feasible solution for CP problem by SAT |
 |
 
-#### Assignment Problem
-| sample code | description |
-|:------------|:------------|
