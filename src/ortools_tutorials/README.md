@@ -29,3 +29,21 @@ Run following commands:
 |[cp_sat_single_solution_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/cp_sat_single_solution_example.py)| An example to find a single feasible solution for CP problem by SAT |
 |
 
+#### Assignment Problem
+| sample code | description |
+|:------------|:------------|
+|[scip_assignment_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scip_assignment_example.py)| A sample one using SCIP to solve a tasks assignment problem |
+|[scip_sized_task_assignment_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scip_sized_task_assignment_example.py)| A sample one using SCIP to solve a sized tasks assignment problem |
+|[scip_allowed_group_assignment_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scip_allowed_group_assignment_example.py)| A sample one using SCIP to solve a tasks assignment problem with grouping constraint |
+|[scip_team_workers_assignment_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scip_team_workers_assignment_example.py)| A sample one using SCIP to solve a tasks assignment problem with team capacity constraint |
+|[sat_assignment_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/sat_assignment_example.py)| A sample one using SAT to solve a tasks assignment problem |
+|[sat_sized_task_assignment_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/sat_sized_task_assignment_example.py)| A sample one using SAT to solve a sized tasks assignment problem |
+|[sat_allowed_group_assignment_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/sat_allowed_group_assignment_example.py)| A sample one using SAT to solve a tasks assignment problem with grouping constraint |
+|[sat_team_works_assignment_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/sat_team_works_assignment_example.py)| A sample one using SAT to solve a tasks assignment problem with team capacity constraint |
+
+#### Schedule Problem
+| sample code | description |
+|:------------|:------------|
+|[scheduling_sat_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scheduling_sat_example.py)| Use SAT to solve a simple scheduling problem |
+|[scheduling_sat_max_requests_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scheduling_sat_max_requests_example.py) | Use SAT to solve a scheduling problem with a soft constraint to meet desired shifts as many as possible |
+|[scheduling_job_shop_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scheduling_job_shop_example.py)| A schedule problem with hard constraints of inter-dependencies|
