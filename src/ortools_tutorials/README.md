@@ -27,7 +27,7 @@ Run following commands:
 |[cp_sat_optimal_solution_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/cp_sat_optimal_solution_example.py)| An example to solve an optimal CP problem with SAT |
 |[cp_sat_puzzle_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/cp_sat_puzzle_example.py)| An example to solve a character algebra CP probelm with SAT |
 |[cp_sat_single_solution_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/cp_sat_single_solution_example.py)| An example to find a single feasible solution for CP problem by SAT |
-|
+
 
 #### Assignment Problem
 | sample code | description |
@@ -47,3 +47,19 @@ Run following commands:
 |[scheduling_sat_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scheduling_sat_example.py)| Use SAT to solve a simple scheduling problem |
 |[scheduling_sat_max_requests_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scheduling_sat_max_requests_example.py) | Use SAT to solve a scheduling problem with a soft constraint to meet desired shifts as many as possible |
 |[scheduling_job_shop_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scheduling_job_shop_example.py)| A schedule problem with hard constraints of inter-dependencies|
+
+#### Kanppacking Problem
+| sample code | description |
+|:------------|:------------|
+|[knapback_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/knapback_example.py)| A sample of knappacking problem with single pack |
+|[bins_packing_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/bins_packing_example.py)| A bin knappacking problem example by SCIP, finding minimum packs to hold all |
+|[multiple_knappacks_sat_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/multiple_knappacks_sat_example.py)| Solve mulitple knappacks by SAT|
+|[multiple_knappacks_scip_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/multiple_knappacks_scip_example.py)| Solve mulitple knappacks by SCIP|
+
+#### Network Problem
+| sample code | description |
+|:------------|:------------|
+|[network_max_flow_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/network_max_flow_example.py)| Find out network maximum flow |
+|[network_min_cost_flow_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/network_min_cost_flow_example.py)| Find out network of lowest cost |
+|[network_assignment_as_min_cost.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/network_assignment_as_min_cost.py)| Model assignment problem with network |
+|[network_team_assignment_as_min_cost_flow.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/network_team_assignment_as_min_cost_flow.py) | Model team assignment problem with network |
