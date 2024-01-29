@@ -48,7 +48,7 @@ Run following commands:
 |[scheduling_sat_max_requests_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scheduling_sat_max_requests_example.py) | Use SAT to solve a scheduling problem with a soft constraint to meet desired shifts as many as possible |
 |[scheduling_job_shop_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/scheduling_job_shop_example.py)| A schedule problem with hard constraints of inter-dependencies|
 
-#### Kanppacking Problem
+#### Knappacking Problem
 | sample code | description |
 |:------------|:------------|
 |[knapback_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/knapback_example.py)| A sample of knappacking problem with single pack |
@@ -63,3 +63,18 @@ Run following commands:
 |[network_min_cost_flow_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/network_min_cost_flow_example.py)| Find out network of lowest cost |
 |[network_assignment_as_min_cost.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/network_assignment_as_min_cost.py)| Model assignment problem with network |
 |[network_team_assignment_as_min_cost_flow.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/network_team_assignment_as_min_cost_flow.py) | Model team assignment problem with network |
+
+#### Routing problem
+| sample code | description |
+|:------------|:------------|
+|[routing_capaciated_vehicle_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_capaciated_vehicle_example.py) | Routing problem with capaciated vehicles |
+|[routing_circuit_drilling_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_circuit_drilling_example.py) | Use routing algorithm to solve circuit drilling |
+|[routing_google_distance_api.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_google_distance_api.py) | Show google distance API |
+|[routing_initial_starting_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_initial_starting_example.py) | Use different initial starting points in routing solution |
+|[routing_penalty_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_penalty_example.py) | Use penalty in objective function to drop vertices |
+|[routing_pickup_delivery_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_pickup_delivery_example.py) | Pickup routing problem |
+|[routing_resource_constraint_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_resource_constraint_example.py) | Routing problem with resource constraints |
+|[routing_traveling_salesperson_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_traveling_salesperson_example.py)| A simple TSP problem |
+|[routing_various_start_end_nodes_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_various_start_end_nodes_example.py) | Routing problem with different start / end vertics |
+|[routing_vehicle_routing_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_vehicle_routing_example.py) | vehicle routing problem |
+|[routing_vrp_time_window_example.py](https://github.com/ygao-wiq/adventofcode/blob/main/src/ortools_tutorials/routing_vrp_time_window_example.py) | vehicle routing with time window constraint |
