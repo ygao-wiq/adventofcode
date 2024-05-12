@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
         row_validity = [set() for _ in range(9)]
         column_validity = [set() for _ in range(9)]
         block_validity = [set() for _ in range(9)]

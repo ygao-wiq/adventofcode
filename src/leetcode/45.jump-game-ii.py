@@ -7,7 +7,7 @@ import sys
 
 # @lc code=start
 class Solution:
-    def jump(self, nums: List[int]) -> int:
+    def jump(self, nums: list[int]) -> int:
         n = len(nums)
         ret = [sys.maxsize for _ in nums]
         ret[n-1] = 0

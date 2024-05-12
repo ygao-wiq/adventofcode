@@ -7,7 +7,7 @@
 # @lc code=start
 class Solution:
 
-    def findBound(self, nums: List[int], target: int, isFirst: bool) -> int:
+    def findBound(self, nums: list[int], target: int, isFirst: bool) -> int:
         start = 0
         end = len(nums) - 1
         while start <= end:
@@ -27,7 +27,7 @@ class Solution:
                 start = mid + 1
         return -1
 
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums: list[int], target: int) -> list[int]:
         first = self.findBound(nums, target, True)
         if first == -1:
             return [-1, -1]
