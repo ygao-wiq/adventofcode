@@ -24,6 +24,20 @@ class Solution:
         if carry>0:
             digits.insert(0, carry)
         return digits
+    
+    def plusOneAnother(self, digits: list[int]) -> list[int]:
+        if not digits:
+            return digits
+        n = len(digits) - 1
+        while n>=0:
+            if digits[n] < 9:
+                digits[n] += 1
+                return digits
+            digits[n] = 0
+            n -= 1
+        ret = [0 for i in range(len(digits)+1)]
+        ret[0] = 1
+        return ret
 
 
         
