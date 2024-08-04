@@ -1,3 +1,9 @@
+#
+# @lc app=leetcode id=51 lang=python3
+#
+#
+
+# @lc code=start
 class Solution:
     def createBoard(self, board: list[list[str]]) -> list[str]:
         ret = []

@@ -1,3 +1,9 @@
+#
+# @lc app=leetcode id=52 lang=python3
+#
+#
+
+# @lc code=start
 class Solution:    
     def backtrace(self, col_sets: set[int], diag_sets: set[int], anti_diag_sets: set[int], row: int, size: int) -> int:
         if row == size:
