@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def plusOne(self, digits: list[int]) -> list[int]:
+    def plusOneAnother(self, digits: list[int]) -> list[int]:
         if not digits:
             return digits
         n = len(digits) - 1
@@ -25,7 +25,7 @@ class Solution:
             digits.insert(0, carry)
         return digits
     
-    def plusOneAnother(self, digits: list[int]) -> list[int]:
+    def plusOne(self, digits: list[int]) -> list[int]:
         if not digits:
             return digits
         n = len(digits) - 1
