@@ -14,6 +14,6 @@ class Solution:
         while stk[-1] != -1:
             current_height = heights[stk[-1]]
             stk.pop()
-            current_width = len(heights) - stk.lastElement() - 1
+            current_width = len(heights) - stk[-1] - 1
             max_area = max(max_area, current_height * current_width)
         return max_area
