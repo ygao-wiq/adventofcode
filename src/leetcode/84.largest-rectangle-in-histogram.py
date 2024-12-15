@@ -1,3 +1,10 @@
+#
+# @lc app=leetcode id=84 lang=python3
+#
+# [84] Largest Rectangle in Histogram
+#
+
+# @lc code=start
 class Solution:
     def largestRectangleArea(self, heights: list[int]) -> int:
         stk = []
@@ -17,3 +24,6 @@ class Solution:
             current_width = len(heights) - stk[-1] - 1
             max_area = max(max_area, current_height * current_width)
         return max_area
+        
+# @lc code=end
+
